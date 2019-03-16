@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biodata</title>
+</head>
+<body>
+	<h1>My Biodata</h1>
+	
+	<div id="app">
+		<p>Name : {{name}}</p>
+		<p>Addres : {{addres}}</p>
+		<p>Hobbies : </p>
+		<ul>
+			<li v-for = "hobbi in hobbies">
+				{{hobbi}}
+			</li>
+		</ul>
+		<p>Married : {{is_married}}</p>
+		<p>School : </p>
+		<ul>
+			<li v-for = "(value, key) in school">
+				{{key}} : {{value}}
+			</li>
+		</ul>
+		<p>Skills : </p>
+		<ul>
+			<li v-for = "skill in skills" :key="skill.id">
+				{{skill.title}}
+			</li>
+		</ul>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+</body>
+</html>
